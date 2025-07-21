@@ -1,0 +1,4 @@
+praw
+tweepy
+python-dotenv
+schedule
