@@ -2,7 +2,13 @@ import praw
 from config import REDDIT
 import datetime
 
-reddit = praw.Reddit(**REDDIT)
+reddit = praw.Reddit(
+    client_id=REDDIT["client_id"],
+    client_secret=REDDIT["client_secret"],
+    username=REDDIT["username"],
+    password=REDDIT["password"],
+    user_agent=REDDIT["user_agent"]
+)
 
 PALABRAS_CLAVE = [
     "grupo aval", "banco de bogotá", "banco de occidente", "banco popular",
